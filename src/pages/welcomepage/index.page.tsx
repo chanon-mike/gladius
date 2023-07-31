@@ -18,13 +18,11 @@
 //   };
 //   const fetchTasks = async () => {
 //     const tasks = await apiClient.tasks.$get().catch(returnNull);
-
 //     if (tasks !== null) setTasks(tasks);
 //   };
 //   const createTask = async (e: FormEvent) => {
 //     e.preventDefault();
 //     if (!label) return;
-
 //     await apiClient.tasks.post({ body: { label } });
 //     setLabel('');
 //     await fetchTasks();
@@ -37,20 +35,16 @@
 //     await apiClient.tasks._taskId(task.id).delete();
 //     await fetchTasks();
 //   };
-
 //   useEffect(() => {
 //     fetchTasks();
 //   }, []);
-
 //   if (!tasks || !user) return <Loading visible />;
-
 //   return (
 //     <>
 //       <BasicHeader user={user} />
 //       <div className={styles.title} style={{ marginTop: '160px' }}>
 //         Welcome to frourio!
 //       </div>
-
 //       <form style={{ textAlign: 'center', marginTop: '80px' }} onSubmit={createTask}>
 //         <input value={label} type="text" onChange={inputLabel} />
 //         <input type="submit" value="ADD" />
